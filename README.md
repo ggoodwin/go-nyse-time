@@ -44,7 +44,7 @@ import "github.com/octolibs/nyse-schedule"
 
 ## 💰 Usage
 
-### Check if the Market is Open
+### Check if the Market is Open at Current Time
 
 ```go
 // Returns: bool
