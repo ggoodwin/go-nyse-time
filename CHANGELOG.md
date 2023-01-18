@@ -13,9 +13,21 @@ and this project adheres to [Semantic Versioning].
 
 ### Added
 
-- Initial release
+- `IsMarketOpen()` - Checks if the market is open at the current time
+  - Returns `true` if the market is open
+- `IsMarketOpenCustom(time.Time)` - Checks if the market is open at a specific time
+  - Returns `true` if the market is open
+- `IsHoliday(time.Time)` - Checks if a specific date is a holiday
+  - Returns `true` if the date is a holiday
+- `IsEarlyClose(time.Time)` - Checks if a specific date is an early close
+  - Returns `true` if the date is an early close
+- `IsWeekend(time.Time)` - Checks if a specific date is a weekend
+  - Returns `true` if the date is a weekend
 
 ### Changed
+
+- Updated `README.md` to include usage examples
+- Updated `CHANGELOG.md` to include changes
 
 ### Deprecated
 
