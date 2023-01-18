@@ -48,7 +48,7 @@ import "github.com/octolibs/nyse-schedule"
 
 ```go
 // Returns: bool
-open := nyse.IsMarketOpen()
+open := nyse_time.IsMarketOpen()
 ```
 
 ### Check if the Market will be Open based on a specific time and date
@@ -56,7 +56,7 @@ open := nyse.IsMarketOpen()
 ```go
 // Parameters: time.Time
 // Returns: bool
-open := nyse.IsMarketOpenCustom(time.Time)
+open := nyse_time.IsMarketOpenCustom(time.Time)
 ```
 
 ### Is Holiday?
@@ -64,7 +64,7 @@ open := nyse.IsMarketOpenCustom(time.Time)
 ```go
 // Parameters: time.Time
 // Returns: bool
-isHoliday := nyse.IsHoliday(time.Time)
+isHoliday := nyse_time.IsHoliday(time.Time)
 ```
 
 ### Is Early Close?
@@ -72,7 +72,7 @@ isHoliday := nyse.IsHoliday(time.Time)
 ```go
 // Parameters: time.Time
 // Returns: bool
-isEarlyClose := nyse.IsEarlyClose(time.Time)
+isEarlyClose := nyse_time.IsEarlyClose(time.Time)
 ```
 
 ### Is Weekend?
@@ -80,7 +80,7 @@ isEarlyClose := nyse.IsEarlyClose(time.Time)
 ```go
 // Parameters: time.Time
 // Returns: bool
-isWeekend := nyse.IsWeekend(time.Time)
+isWeekend := nyse_time.IsWeekend(time.Time)
 ```
 
 ## 💻 Dependencies

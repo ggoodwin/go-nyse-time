@@ -9,6 +9,26 @@ and this project adheres to [Semantic Versioning].
 
 - Will list future updates here
 
+## [0.0.2] - 2023-01-18
+
+### Added
+
+### Changed
+
+- Changed package name from `nyse` to `nyse_time`
+- Updated `README.md` to include usage examples
+- Updated `CHANGELOG.md` to include changes
+
+### Deprecated
+
+### Removed
+
+- Large amount of public functions that needed to be private
+
+### Fixed
+
+### Security
+
 ## [0.0.1] - 2023-01-17
 
 ### Added
