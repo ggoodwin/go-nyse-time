@@ -81,6 +81,6 @@ and this project adheres to [Semantic Versioning].
 
 <!-- Versions -->
 [unreleased]: https://github.com/octolibs/nyse-time/compare/v0.0.1...MAIN
-[0.0.3]: https://github.com/octolibs/nyse-time/releases/tag/v0.0.3
-[0.0.2]: https://github.com/octolibs/nyse-time/releases/tag/v0.0.2
+[0.0.3]: https://github.com/octolibs/nyse-time/compare/v0.0.2...v0.0.3
+[0.0.2]: https://github.com/octolibs/nyse-time/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/octolibs/nyse-time/releases/tag/v0.0.1
