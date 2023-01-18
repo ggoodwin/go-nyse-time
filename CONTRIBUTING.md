@@ -1,3 +1,3 @@
-# Contributing to octolibs calendar
+# Contributing to octolibs nyse-time
 
 ## Coming Soon

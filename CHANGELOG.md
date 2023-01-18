@@ -9,6 +9,24 @@ and this project adheres to [Semantic Versioning].
 
 - Will list future updates here
 
+## [0.0.3] - 2023-01-18
+
+### Added
+
+### Changed
+
+- Changed repo title to `nyse-time`
+- Updated `README.md` to include usage examples
+- Updated `CHANGELOG.md` to include changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## [0.0.2] - 2023-01-18
 
 ### Added
@@ -62,5 +80,7 @@ and this project adheres to [Semantic Versioning].
 [semantic versioning]: https://semver.org/spec/v2.0.0.html
 
 <!-- Versions -->
-[unreleased]: https://github.com/octolibs/nyse-schedule/compare/v0.0.1...MAIN
-[0.0.1]: https://github.com/octolibs/nyse-schedule/releases/tag/v0.0.1
+[unreleased]: https://github.com/octolibs/nyse-time/compare/v0.0.1...MAIN
+[0.0.3]: https://github.com/octolibs/nyse-time/releases/tag/v0.0.3
+[0.0.2]: https://github.com/octolibs/nyse-time/releases/tag/v0.0.2
+[0.0.1]: https://github.com/octolibs/nyse-time/releases/tag/v0.0.1
