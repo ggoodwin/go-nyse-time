@@ -1,9 +1,9 @@
 <div align="center">
-	<h1><img alt="Stocks logo" src="https://github.com/octolibs/calendar/blob/main/timetable.png" height="300" /><br />
+	<h1><img alt="Stocks logo" src="https://github.com/octolibs/nyse-schedule/blob/main/timetable.png" height="300" /><br />
 		Go New York Stock Exchange (NYSE) Schedule Library
 	</h1>
 
-[![Go Reference](https://pkg.go.dev/badge/octolibs/calendar.svg)](https://pkg.go.dev/github.com/octolibs/calendar) [![Go Version](https://img.shields.io/github/go-mod/go-version/octolibs/calendar)](https://go.dev/) [![GoReportCard](https://goreportcard.com/badge/github.com/octolibs/calendar)](https://goreportcard.com/report/github.com/octolibs/calendar) [![CodeFactor](https://www.codefactor.io/repository/github/octolibs/calendar/badge)](https://www.codefactor.io/repository/github/octolibs/calendar) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/octolibs/calendar/.github/workflows/go.yml)](https://github.com/octolibs/calendar/blob/main/.github/workflows/go.yml) ![Size](https://img.shields.io/github/languages/code-size/octolibs/calendar) [![Last Commit](https://img.shields.io/github/last-commit/octolibs/calendar)](https://github.com/octolibs/calendar/commits/main) [![License](https://img.shields.io/github/license/octolibs/calendar)](https://github.com/octolibs/calendar/blob/main/LICENSE)
+[![Go Reference](https://pkg.go.dev/badge/octolibs/nyse-schedule.svg)](https://pkg.go.dev/github.com/octolibs/nyse-schedule) [![Go Version](https://img.shields.io/github/go-mod/go-version/octolibs/nyse-schedule)](https://go.dev/) [![GoReportCard](https://goreportcard.com/badge/github.com/octolibs/nyse-schedule)](https://goreportcard.com/report/github.com/octolibs/nyse-schedule) [![CodeFactor](https://www.codefactor.io/repository/github/octolibs/nyse-schedule/badge)](https://www.codefactor.io/repository/github/octolibs/nyse-schedule) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/octolibs/nyse-schedule/.github/workflows/go.yml)](https://github.com/octolibs/nyse-schedule/blob/main/.github/workflows/go.yml) ![Size](https://img.shields.io/github/languages/code-size/octolibs/nyse-schedule) [![Last Commit](https://img.shields.io/github/last-commit/octolibs/nyse-schedule)](https://github.com/octolibs/nyse-schedule/commits/main) [![License](https://img.shields.io/github/license/octolibs/nyse-schedule)](https://github.com/octolibs/nyse-schedule/blob/main/LICENSE)
 
 </div>
 <hr/>
@@ -51,7 +51,7 @@ import "github.com/octolibs/nyse-schedule"
 open := nyse.IsMarketOpen()
 ```
 
-### Get full stock details
+### Check if a time and date
 
 ```go
 //Returns `Result` struct
@@ -91,8 +91,8 @@ request.
 
 ## ⚖️ License
 
-This project is under the MIT License. See the [LICENSE](https://github.com/octolibs/calendar/blob/main/LICENSE) file for the full license text.
+This project is under the MIT License. See the [LICENSE](https://github.com/octolibs/nyse-schedule/blob/main/LICENSE) file for the full license text.
 
 ## 📜 Changes
 
-Check out our [CHANGELOG](https://github.com/octolibs/calendar/blob/main/CHANGELOG.md)
+Check out our [CHANGELOG](https://github.com/octolibs/nyse-schedule/blob/main/CHANGELOG.md)
