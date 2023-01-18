@@ -3,13 +3,13 @@ package nyse_time
 import "time"
 
 /**SECTION - Exchange Trading Hours
- * @desc The following functions are used to determine if the market is open.
+ * * @desc The following functions are used to determine if the market is open.
  */
 
 /**ANCHOR - IsNormalHours
  * @param t time.Time
  * @return bool
- * @desc Returns true if the market is open on the given date, false otherwise.
+ * * @desc Returns true if the market is open on the given date, false otherwise.
  * @note The market is open from 9:30am to 4:00pm EST/EDT on weekdays.
  * @note The market is closed on weekends and holidays.
  * @note The market closes at 1:00pm EST/EDT on the day before Thanksgiving.
@@ -30,3 +30,5 @@ func IsNormalHours(t time.Time) bool {
 
 	return t.After(openTime) && t.Before(closeTime)
 }
+
+//!SECTION

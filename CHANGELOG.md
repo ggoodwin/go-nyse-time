@@ -9,6 +9,24 @@ and this project adheres to [Semantic Versioning].
 
 - Will list future updates here
 
+## [1.0.0] - 2023-01-18
+
+### Added
+
+- Better Commenting
+
+### Changed
+
+- Updated `CHANGELOG.md` to include changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## [0.0.3] - 2023-01-18
 
 ### Added
@@ -81,6 +99,7 @@ and this project adheres to [Semantic Versioning].
 
 <!-- Versions -->
 [unreleased]: https://github.com/octolibs/nyse-time/compare/v0.0.1...MAIN
+[1.0.0]: https://github.com/octolibs/nyse-time/compare/v0.0.3...v1.0.0
 [0.0.3]: https://github.com/octolibs/nyse-time/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/octolibs/nyse-time/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/octolibs/nyse-time/releases/tag/v0.0.1
