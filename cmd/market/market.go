@@ -1,7 +1,9 @@
-package nyse
+package main
 
 import (
 	"time"
+
+	"github.com/octolibs/nyse-schedule"
 )
 
 /**SECTION - Main Function
@@ -20,5 +22,5 @@ import (
  */
 func IsMarketOpen() bool {
 	currentTime := time.Now().UTC()
-	return !IsWeekend(currentTime) && !IsHoliday(currentTime) && IsNormalHours(currentTime)
+	return !nyse.IsWeekend(currentTime) && !nyse.IsHoliday(currentTime) && nyse.IsNormalHours(currentTime)
 }

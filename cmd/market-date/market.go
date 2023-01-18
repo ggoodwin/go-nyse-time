@@ -1,7 +1,9 @@
-package nyse
+package main
 
 import (
 	"time"
+
+	"github.com/octolibs/nyse-schedule"
 )
 
 /**SECTION - Main Function
@@ -20,20 +22,5 @@ import (
  * @note The market closes at 1:00pm EST/EDT on the day before Independence Day.
  */
 func IsMarketOpen(t time.Time) bool {
-	//NOTE - The market always opens at 9:30AM EST except weekends and holidays.
-	openTime := time.Date(t.Year(), t.Month(), t.Day(), 14, 30, 0, 0, time.UTC)
-	//NOTE - The market closes at 1PM EST on certain days.
-	earlyCloseTime := time.Date(t.Year(), t.Month(), t.Day(), 18, 00, 0, 0, time.UTC)
-	//NOTE - The market closes at 4PM EST on normal days.
-	closeTime := time.Date(t.Year(), t.Month(), t.Day(), 21, 00, 0, 0, time.UTC)
-
-	if IsWeekend(t) || IsHoliday(t) {
-		return false
-	}
-
-	if IsEarlyClose(t) {
-		return t.After(openTime) && t.Before(earlyCloseTime)
-	}
-
-	return t.After(openTime) && t.Before(closeTime)
+	return !nyse.IsWeekend(t) && !nyse.IsHoliday(t) && nyse.IsNormalHours(t)
 }
