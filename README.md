@@ -1,16 +1,16 @@
 <div align="center">
-	<h1><img alt="Stocks logo" src="https://github.com/octolibs/nyse-time/blob/main/timetable.png" height="300" /><br />
+	<h1><img alt="Stocks logo" src="https://github.com/ggoodwin/go-nyse-time/blob/master/timetable.png" height="300" /><br />
 		New York Stock Exchange (NYSE) Time Go Library
 	</h1>
 
-[![Go Reference](https://pkg.go.dev/badge/octolibs/nyse-time.svg)](https://pkg.go.dev/github.com/octolibs/nyse-time) [![Go Version](https://img.shields.io/github/go-mod/go-version/octolibs/nyse-time)](https://go.dev/) [![GoReportCard](https://goreportcard.com/badge/github.com/octolibs/nyse-time)](https://goreportcard.com/report/github.com/octolibs/nyse-time) [![CodeFactor](https://www.codefactor.io/repository/github/octolibs/nyse-time/badge)](https://www.codefactor.io/repository/github/octolibs/nyse-time) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/octolibs/nyse-time/.github/workflows/go.yml)](https://github.com/octolibs/nyse-time/blob/main/.github/workflows/go.yml) ![Size](https://img.shields.io/github/languages/code-size/octolibs/nyse-time) [![Last Commit](https://img.shields.io/github/last-commit/octolibs/nyse-time)](https://github.com/octolibs/nyse-time/commits/main) [![License](https://img.shields.io/github/license/octolibs/nyse-time)](https://github.com/octolibs/nyse-time/blob/main/LICENSE)
+[![Go Reference](https://pkg.go.dev/badge/ggoodwin/go-nyse-time.svg)](https://pkg.go.dev/github.com/ggoodwin/go-nyse-time) [![Go Version](https://img.shields.io/github/go-mod/go-version/ggoodwin/go-nyse-time)](https://go.dev/) [![GoReportCard](https://goreportcard.com/badge/github.com/ggoodwin/go-nyse-time)](https://goreportcard.com/report/github.com/ggoodwin/go-nyse-time) [![CodeFactor](https://www.codefactor.io/repository/github/ggoodwin/go-nyse-time/badge)](https://www.codefactor.io/repository/github/ggoodwin/go-nyse-time) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ggoodwin/go-nyse-time/.github/workflows/go.yml)](https://github.com/ggoodwin/go-nyse-time/blob/master/.github/workflows/go.yml) ![Size](https://img.shields.io/github/languages/code-size/ggoodwin/go-nyse-time) [![Last Commit](https://img.shields.io/github/last-commit/ggoodwin/go-nyse-time)](https://github.com/ggoodwin/go-nyse-time/commits/master) [![License](https://img.shields.io/github/license/ggoodwin/go-nyse-time)](https://github.com/ggoodwin/go-nyse-time/blob/master/LICENSE.md)
 
 </div>
 <hr/>
 
 ## 🌟 How it works
 
-The library uses the current time to determine if the market is open, closed, or early closed. It also determines if the current day is a holiday.
+The library uses the current time to determine if the market is open, closed, or closed early. It also determines if the current day is a holiday.
 
 ## 📦 Installation and Usage
 
@@ -31,7 +31,7 @@ If you don't have `Go` installed, you can download it from [here](https://go.dev
 Run the following command in the `console`, in the `project directory`, to install the library with `go get`
 
 ```plain
-go get github.com/octolibs/nyse-time
+go get github.com/ggoodwin/go-nyse-time
 ```
 
 ### Importing
@@ -39,7 +39,7 @@ go get github.com/octolibs/nyse-time
 Add the import to your `.go` file
 
 ```go
-import "github.com/octolibs/nyse-time"
+import nyse_time "github.com/ggoodwin/go-nyse-time"
 ```
 
 ## 💰 Usage
@@ -59,7 +59,7 @@ open := nyse_time.IsMarketOpen()
 open := nyse_time.IsMarketOpenCustom(time.Time)
 ```
 
-### Is Holiday?
+### Is It A Holiday?
 
 ```go
 // Parameters: time.Time
@@ -67,7 +67,7 @@ open := nyse_time.IsMarketOpenCustom(time.Time)
 isHoliday := nyse_time.IsHoliday(time.Time)
 ```
 
-### Is Early Close?
+### Is It An Early Close Day?
 
 ```go
 // Parameters: time.Time
@@ -75,7 +75,7 @@ isHoliday := nyse_time.IsHoliday(time.Time)
 isEarlyClose := nyse_time.IsEarlyClose(time.Time)
 ```
 
-### Is Weekend?
+### Is It A Weekend?
 
 ```go
 // Parameters: time.Time
@@ -89,14 +89,28 @@ isWeekend := nyse_time.IsWeekend(time.Time)
 
 ## 🙇‍♂️ Issues and Contributing
 
-If you find an issue with this library, please report an issue. If you'd
-like, we welcome any contributions. Fork this library and submit a pull
-request.
+If you find an issue with this library, please report the issue using our [GITHUB-ISSUES] or check out the [SECURITY] details if it is security related.
+
+If you'd like, I welcome any contributions. Please read the [CONTRIBUTING] document then [FORK] this library and submit a [PULL-REQUEST]. Make sure to click `compare across forks` to see your fork.
 
 ## ⚖️ License
 
-This project is under the MIT License. See the [LICENSE](https://github.com/octolibs/nyse-time/blob/main/LICENSE) file for the full license text.
+This project is under the MIT License. See the [LICENSE] file for the full license text.
 
 ## 📜 Changes
 
-Check out our [CHANGELOG](https://github.com/octolibs/nyse-time/blob/main/CHANGELOG.md)
+Check out our [CHANGELOG]
+
+## 👍🏻 Code of Conduct
+
+Please read my [CODE-OF-CONDUCT] before contributing or engaging in discussions.
+
+<!-- Links -->
+[LICENSE]: https://github.com/ggoodwin/go-nyse-time/blob/master/LICENSE.md
+[CHANGELOG]: https://github.com/ggoodwin/go-nyse-time/blob/master/CHANGELOG.md
+[SECURITY]: https://github.com/ggoodwin/go-nyse-time/blob/master/SECURITY.md
+[FORK]: https://github.com/ggoodwin/go-nyse-time/fork
+[PULL-REQUEST]: https://github.com/ggoodwin/go-nyse-time/compare
+[CODE-OF-CONDUCT]: https://github.com/ggoodwin/go-nyse-time/blob/master/CODE_OF_CONDUCT.md
+[CONTRIBUTING]: https://github.com/ggoodwin/go-nyse-time/blob/master/CONTRIBUTING.md
+[GITHUB-ISSUES]: https://github.com/ggoodwin/go-nyse-time/issues
