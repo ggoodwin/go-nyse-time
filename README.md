@@ -1,9 +1,15 @@
 <div align="center">
-	<h1><img alt="Stocks logo" src="https://github.com/ggoodwin/go-nyse-time/blob/master/timetable.png" height="300" /><br />
+	<h1><img alt="Time logo" src="https://github.com/ggoodwin/go-nyse-time/blob/master/timetable.png" height="300" /><br />
 		New York Stock Exchange (NYSE) Time Go Library
 	</h1>
 
-[![Go Reference](https://pkg.go.dev/badge/ggoodwin/go-nyse-time.svg)](https://pkg.go.dev/github.com/ggoodwin/go-nyse-time) [![Go Version](https://img.shields.io/github/go-mod/go-version/ggoodwin/go-nyse-time)](https://go.dev/) [![GoReportCard](https://goreportcard.com/badge/github.com/ggoodwin/go-nyse-time)](https://goreportcard.com/report/github.com/ggoodwin/go-nyse-time) [![CodeFactor](https://www.codefactor.io/repository/github/ggoodwin/go-nyse-time/badge)](https://www.codefactor.io/repository/github/ggoodwin/go-nyse-time) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ggoodwin/go-nyse-time/.github/workflows/go.yml)](https://github.com/ggoodwin/go-nyse-time/blob/master/.github/workflows/go.yml) ![Size](https://img.shields.io/github/languages/code-size/ggoodwin/go-nyse-time) [![Last Commit](https://img.shields.io/github/last-commit/ggoodwin/go-nyse-time)](https://github.com/ggoodwin/go-nyse-time/commits/master) [![License](https://img.shields.io/github/license/ggoodwin/go-nyse-time)](https://github.com/ggoodwin/go-nyse-time/blob/master/LICENSE.md)
+[![GMan#0001](https://dcbadge.vercel.app/api/shield/179795086543028224)](https://discord.id/?prefill=179795086543028224) [![Go Package Devs](https://dcbadge.vercel.app/api/server/jwEYR2Dume)](https://discord.gg/jwEYR2Dume)
+
+[![Go Reference](https://pkg.go.dev/badge/ggoodwin/go-nyse-time.svg)](https://pkg.go.dev/github.com/ggoodwin/go-nyse-time) [![Go Version](https://img.shields.io/github/go-mod/go-version/ggoodwin/go-nyse-time)](https://go.dev/) ![Size](https://img.shields.io/github/languages/code-size/ggoodwin/go-nyse-time) [![Last Commit](https://img.shields.io/github/last-commit/ggoodwin/go-nyse-time)](https://github.com/ggoodwin/go-nyse-time/commits/master) [![License](https://img.shields.io/github/license/ggoodwin/go-nyse-time)](https://github.com/ggoodwin/go-nyse-time/blob/master/LICENSE.md)
+
+[![GoReportCard](https://goreportcard.com/badge/github.com/ggoodwin/go-nyse-time)](https://goreportcard.com/report/github.com/ggoodwin/go-nyse-time) [![CodeFactor](https://www.codefactor.io/repository/github/ggoodwin/go-nyse-time/badge)](https://www.codefactor.io/repository/github/ggoodwin/go-nyse-time) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/17f51d3e54264211b19220ce470783ae)](https://app.codacy.com/gh/ggoodwin/go-nyse-time/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![codecov](https://codecov.io/gh/ggoodwin/go-nyse-time/branch/master/graph/badge.svg?token=YNDB8EF3ZN)](https://codecov.io/gh/ggoodwin/go-nyse-time)
+
+[![Build](https://github.com/ggoodwin/go-nyse-time/actions/workflows/build.yml/badge.svg)](https://github.com/ggoodwin/go-nyse-time/actions/workflows/build.yml) [![lint](https://github.com/ggoodwin/go-nyse-time/actions/workflows/lint.yml/badge.svg)](https://github.com/ggoodwin/go-nyse-time/actions/workflows/lint.yml) [![CodeQL](https://github.com/ggoodwin/go-nyse-time/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/ggoodwin/go-nyse-time/actions/workflows/github-code-scanning/codeql)
 
 </div>
 <hr/>
