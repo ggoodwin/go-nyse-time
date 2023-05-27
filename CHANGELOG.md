@@ -1,12 +1,32 @@
 # Changelog
 
-All notable changes to go-nyse-time are documented in this file.
+All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog], and this project adheres to [Semantic Versioning].
 
 ## [Unreleased]
 
 - Will list future updates here
+
+## [1.0.2] - 2023-05-27
+
+### Added
+
+- Added `TODO.md` file
+- Added `build.yml` to `.github/workflows`
+- Added `lint.yml` to `.github/workflows`
+
+### Changed
+
+- Renamed `market.go` to `go-nyse-time.go`
+- Moved `holiday.go` to `src` directory
+- Moved `hours.go` to `src` directory
+- Moved `go-nys-time.go` to `src` directory
+- Updated `.gitignore` file
+
+### Removed
+
+- Removed `go.yml` from `.github/workflows`
 
 ## [1.0.1] - 2023-05-23
 
@@ -69,7 +89,8 @@ The format is based on [Keep a Changelog], and this project adheres to [Semantic
 [semantic versioning]: https://semver.org/spec/v2.0.0.html
 
 <!-- Versions -->
-[unreleased]: https://github.com/ggoodwin/go-nyse-time/compare/v1.0.1...DEVELOP
+[unreleased]: https://github.com/ggoodwin/go-nyse-time/compare/v1.0.2...DEVELOP
+[1.0.2]: https://github.com/ggoodwin/go-nyse-time/compare/v1.0.0...v1.0.1
 [1.0.1]: https://github.com/ggoodwin/go-nyse-time/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/ggoodwin/go-nyse-time/compare/v0.0.3...v1.0.0
 [0.0.3]: https://github.com/ggoodwin/go-nyse-time/compare/v0.0.2...v0.0.3

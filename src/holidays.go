@@ -1,26 +1,14 @@
-package nyse_time
+package go_nyse_time
 
 import "time"
 
-/**SECTION - Holiday Functions
- * * @desc The following functions are used by the holiday algorithms.
- */
-
-/**ANCHOR - IsWeekend
- * @param t time.Time
- * @return bool
- * * @desc Returns true if the time is a weekend, false otherwise.
- */
+// The IsWeekend function in Go checks if a given date is a Saturday or Sunday.
 func IsWeekend(t time.Time) bool {
 	weekday := t.Weekday()
 	return weekday == time.Saturday || weekday == time.Sunday
 }
 
-/**ANCHOR - IsHoliday
- * @param t time.Time
- * @return bool
- * * @desc Returns true if the date is a holiday, false otherwise.
- */
+// The IsHoliday function in Go checks if a given date is a holiday.
 func IsHoliday(t time.Time) bool {
 	year := t.Year()
 	month := t.Month()
@@ -50,14 +38,7 @@ func IsHoliday(t time.Time) bool {
 		(month == christmasDay.Month() && day == christmasDay.Day())
 }
 
-/**ANCHOR - IsEarlyClose
- * @param t time.Time
- * @return bool
- * * @desc Returns true if the day is an early close day, false otherwise.
- * @note The market closes at 1:00pm EST/EDT on the day before Thanksgiving.
- * @note The market closes at 1:00pm EST/EDT on Christmas Eve.
- * @note The market closes at 1:00pm EST/EDT on the day before Independence Day.
- */
+// The function checks if a given date is an early close day based on specific holidays and weekends.
 func IsEarlyClose(t time.Time) bool {
 	year := t.Year()
 	month := t.Month()
@@ -72,14 +53,7 @@ func IsEarlyClose(t time.Time) bool {
 		(month == christmasEveDay.Month() && day == christmasEveDay.Day() && !IsWeekend(t))
 }
 
-/**ANCHOR - nthWeekday
- * @param year int
- * @param month time.Month
- * @param weekday time.Weekday
- * @param n int
- * @return time.Time
- * * @desc Returns the nth weekday of the month.
- */
+// The function returns the nth occurrence of a specific weekday in a given month and year.
 func nthWeekday(year int, month time.Month, weekday time.Weekday, n int) time.Time {
 	t := time.Date(year, month, 1, 0, 0, 0, 0, time.UTC)
 	for i := 0; i < n; i++ {
@@ -88,12 +62,7 @@ func nthWeekday(year int, month time.Month, weekday time.Weekday, n int) time.Ti
 	return t
 }
 
-/**ANCHOR - nextWeekday
- * @param t time.Time
- * @param weekday time.Weekday
- * @return time.Time
- * * @desc Returns the next weekday after t.
- */
+// The function returns the next date that matches a given weekday.
 func nextWeekday(t time.Time, weekday time.Weekday) time.Time {
 	for t.Weekday() != weekday {
 		t = t.AddDate(0, 0, 1)
@@ -101,14 +70,7 @@ func nextWeekday(t time.Time, weekday time.Weekday) time.Time {
 	return t
 }
 
-/**ANCHOR - EasterSunday
- * @param year int
- * @return time.Time
- * * @desc Returns the date of Easter Sunday.
- * @note This holiday is also known as Easter Day.
- * @note This algorithm is based on the algorithm found at
- * LINK - http://www.tondering.dk/claus/cal/easter.php
- */
+// The function calculates the date of Easter Sunday for a given year using the Meeus/Jones/Butcher algorithm.
 func easterSunday(year int) time.Time {
 	a := year % 19
 	b := year / 100
@@ -127,29 +89,13 @@ func easterSunday(year int) time.Time {
 	return time.Date(year, time.Month(month), day, 0, 0, 0, 0, time.UTC)
 }
 
-//!SECTION
-
-/**SECTION - Holiday Algorithms
- * * @desc The following functions are used to calculate holidays.
- */
-
-/**ANCHOR - fridayNYE
- * @param year int
- * @return bool
- * * @desc Returns true if NYE falls on a Friday.
- * @note This function is only used if the day before New Year's Day is a Friday.
- */
+// The function checks if New Year's Eve falls on a Friday in a given year.
 func fridayNYE(year int) bool {
 	theDay := time.Date(year, time.December, 31, 0, 0, 0, 0, time.UTC).Weekday()
 	return theDay == time.Friday
 }
 
-/**ANCHOR - newYearsDay
- * @param year int
- * @return time.Time
- * * @desc Returns the observation date of New Year's Day.
- * @note This holiday is also known as New Years.
- */
+// The function returns the date of New Year's Day for a given year, adjusting for cases where it falls on a Sunday.
 func newYearsDay(year int) time.Time {
 	theDay := time.Date(year, time.January, 1, 0, 0, 0, 0, time.UTC).Weekday()
 
@@ -159,79 +105,37 @@ func newYearsDay(year int) time.Time {
 	return time.Date(year, time.January, 1, 0, 0, 0, 0, time.UTC)
 }
 
-/**ANCHOR - mlkJrDay
- * @param year int
- * @return time.Time
- * * @desc Returns the date of Martin Luther King Jr. Day.
- * @note This holiday is also known as MLK Jr. Day.
- */
+// The function returns the date of the third Monday in January of a given year, which is Martin Luther King Jr. Day in the United States.
 func mlkJrDay(year int) time.Time {
 	return nthWeekday(year, time.January, time.Monday, 3)
 }
 
-/**ANCHOR - washingtonsBirthday
- * @param year int
- * @return time.Time
- * * @desc Returns the date of Washington's Birthday.
- * @note This holiday is also known as Presidents' Day.
- */
+// The function returns the date of the third Monday in February for a given year.
 func washingtonsBirthday(year int) time.Time {
 	return nthWeekday(year, time.February, time.Monday, 3)
 }
 
-/**ANCHOR - goodFriday
- * @param year int
- * @return time.Time
- * * @desc Returns the date of Good Friday.
- * @note This holiday is also known as Easter Friday.
- * @note This holiday is also known as Holy Friday.
- * @note This holiday is also known as Great Friday.
- * @note This holiday is also known as Easter Eve.
- */
+// The function returns the date of Good Friday for a given year.
 func goodFriday(year int) time.Time {
 	return easterSunday(year).AddDate(0, 0, -2)
 }
 
-/**ANCHOR - memorialDay
- * @param year int
- * @return time.Time
- * * @desc Returns the date of Memorial Day.
- * @note This holiday is also known as Decoration Day.
- * @note This holiday is also known as May Day.
- */
+// The function returns the date of the last Monday in May for a given year.
 func memorialDay(year int) time.Time {
 	return nthWeekday(year, time.May, time.Monday, -1)
 }
 
-/**ANCHOR - juneteenth
- * @param year int
- * @return time.Time
- * * @desc Returns the date of Juneteenth.
- * @note This holiday is also known as Emancipation Day.
- * @note This holiday is also known as Freedom Day.
- * @note This holiday is also known as Jubilee Day.
- * @note This holiday is also known as Liberation Day.
- */
+// The function returns the date of Juneteenth for a given year in Go.
 func juneteenth(year int) time.Time {
 	return time.Date(year, time.June, 19, 0, 0, 0, 0, time.UTC)
 }
 
-/**ANCHOR - julyThird
- * @param year int
- * @return time.Time
- * * @desc Returns the day before Independence Day.
- * @note If the day before Independence Day is a weekday, then the exchange closes early that day.
- */
+// The function returns a time object representing July 3rd of a given year.
 func julyThird(year int) time.Time {
 	return time.Date(year, time.July, 3, 0, 0, 0, 0, time.UTC)
 }
 
-/**ANCHOR - independenceDay
- * @param year int
- * @return time.Time
- * * @desc Returns the observation date of Independence Day.
- * @note This holiday is also known as Fourth of July.
- */
+// The function returns the date of Independence Day for a given year, adjusting for weekends.
 func independenceDay(year int) time.Time {
 	theDay := time.Date(year, time.July, 4, 0, 0, 0, 0, time.UTC).Weekday()
 	if theDay == time.Saturday {
@@ -243,52 +147,27 @@ func independenceDay(year int) time.Time {
 	return time.Date(year, time.July, 4, 0, 0, 0, 0, time.UTC)
 }
 
-/**ANCHOR - laborDay
- * @param year int
- * @return time.Time
- * * @desc Returns the date of Labor Day.
- */
+// The function "laborDay" returns the date of the first Monday in September of a given year.
 func laborDay(year int) time.Time {
 	return nthWeekday(year, time.September, time.Monday, 1)
 }
 
-/**ANCHOR - thanksgivingDay
- * @param year int
- * @return time.Time
- * * @desc Returns the date of Thanksgiving Day.
- */
+// The function returns the date of the fourth Thursday in November for a given year, representing Thanksgiving Day in the US.
 func thanksgivingDay(year int) time.Time {
 	return nthWeekday(year, time.November, time.Thursday, 4)
 }
 
-/**ANCHOR - blackFriday
- * @param year int
- * @return time.Time
- * * @desc Returns the date of the Friday after Thanksgiving Day.
- * @note This holiday is also known as Black Friday.
- * @note The exchange closes early on this day.
- */
+// The function "blackFriday" returns the date of the fourth Friday in November of a given year.
 func blackFriday(year int) time.Time {
 	return nthWeekday(year, time.November, time.Friday, 4)
 }
 
-/**ANCHOR - christmasEveDay
- * @param year int
- * @return time.Time
- * * @desc Returns the date of Christmas Eve.
- * @note If this is a weekday the exchange closes early on this day.
- */
+// The function returns a time object representing Christmas Eve day for a given year.
 func christmasEveDay(year int) time.Time {
 	return time.Date(year, time.December, 24, 0, 0, 0, 0, time.UTC)
 }
 
-/**ANCHOR - christmasDay
- * @param year int
- * @return time.Time
- * * @desc Returns the observation date of Christmas Day.
- * @note This holiday is also known as Christmas.
- * @note This holiday is also known as Xmas.
- */
+// The function returns the date of Christmas Day for a given year, adjusting for weekends.
 func christmasDay(year int) time.Time {
 	theDay := time.Date(year, time.December, 25, 0, 0, 0, 0, time.UTC).Weekday()
 	if theDay == time.Saturday {
@@ -299,5 +178,3 @@ func christmasDay(year int) time.Time {
 	}
 	return time.Date(year, time.December, 25, 0, 0, 0, 0, time.UTC)
 }
-
-//!SECTION
